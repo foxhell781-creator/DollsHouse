@@ -1,6 +1,8 @@
+
+/* ESTILOS GERAIS */
 html {
     scroll-behavior: smooth;
-  }
+}
 
 * {
     margin: 0;
@@ -9,9 +11,15 @@ html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+    background-color: #fff9fb;
+    color: #5a3d5c;
+    line-height: 1.6;
+}
 
+/* BANNER PRINCIPAL */
 .banner {
-    width: 100%;
+       width: 100%;
     min-height: 100vh;
     background:
         linear-gradient(135deg, rgba(35, 0, 68, 0.8) 0%, rgba(107, 17, 160, 0.8) 100%),
@@ -33,9 +41,11 @@ html {
 }
 
 .logo {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 1px;
+    color: #ff69b4;
+    text-shadow: 2px 2px 0px #fff;
 }
 
 nav {
@@ -44,11 +54,12 @@ nav {
 }
 
 nav a {
-    color: rgb(255, 255, 255);
+    color: #5a3d5c;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     padding: 5px 0;
+    transition: color 0.3s ease;
 }
 
 nav a::after {
@@ -57,9 +68,13 @@ nav a::after {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background: rgb(255, 255, 255);
+    height: 3px;
+    background: #ff69b4;
     transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff69b4;
 }
 
 nav a:hover::after {
@@ -78,43 +93,44 @@ nav a:hover::after {
 }
 
 .main-title {
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 700;
     margin-bottom: 20px;
-    letter-spacing: 2px;
+    color: #ff69b4;
+    text-shadow: 3px 3px 0px #fff;
 }
 
 .description {
     max-width: 600px;
-    font-size: 18px;
-    line-height: 1.6;
+    font-size: 20px;
     margin-bottom: 40px;
-    opacity: 0.9;
+    color: #5a3d5c;
+    font-weight: 500;
 }
 
 .cta-button {
     display: inline-block;
-    background: rgb(55, 0, 71);
-    color: #e8c1ff;
-    padding: 14px 32px;
-    border-radius: 30px;
+    background: #ff69b4;
+    color: white;
+    padding: 16px 36px;
+    border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+    font-size: 18px;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
 }
 
-/* ESTILOS DA SEÇÃO DE SERVIÇOS */
+/* SEÇÃO DE PRODUTOS */
 .services-section {
     width: 100%;
     padding: 80px 20px;
-    background: linear-gradient(135deg, rgba(71, 6, 97, 0.95) 0%, rgba(100, 3, 145, 0.95) 100%);
-    color: rgb(243, 224, 255);
+    background: linear-gradient(135deg, #e7c7fc 0%, #f2e6ff 100%);
     text-align: center;
 }
 
@@ -127,156 +143,175 @@ nav a:hover::after {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    color: #d069ff;
 }
 
 .section-description {
     max-width: 700px;
     margin: 0 auto 60px auto;
     font-size: 18px;
-    line-height: 1.6;
-    opacity: 0.9;
 }
 
 .services-cards-wrapper {
     display: flex;
     justify-content: center;
     gap: 30px;
-    /* Espaço entre os cards */
     flex-wrap: wrap;
-    /* Permite que os cards quebrem para a próxima linha em telas menores */
 }
 
 .service-card {
-    background-color: rgba(36, 1, 65, 0.7);
-    /* Cor de fundo dos cards, um pouco mais escura que o fundo principal */
-    border-radius: 15px;
-    padding: 40px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 0 30px 0;
     flex: 1 1 300px;
-    /* Flexível, com largura base de 300px */
     max-width: 350px;
-    /* Largura máxima para os cards */
-    text-align: left;
-    /* Conteúdo interno alinhado à esquerda */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid transparent;
+    overflow: hidden;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    border-color: #e17dff;
 }
 
-.icon-wrapper {
-    background-color: #bd3eef;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
+.image-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
 }
 
-.icon-wrapper i {
-    font-size: 28px;
-    color: white;
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .image-wrapper img {
+    transform: scale(1.05);
 }
 
 .service-card h3 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
-    letter-spacing: 0.5px;
+    color: #5a3d5c;
+    padding: 0 20px;
 }
 
 .service-card p {
     font-size: 16px;
     line-height: 1.7;
-    opacity: 0.85;
+    color: #7a6a7c;
+    padding: 0 20px;
+    margin-bottom: 20px;
 }
 
-/* Responsividade para a seção de serviços */
-@media (max-width: 992px) {
-    .section-title {
-        font-size: 40px;
-    }
-
-    .section-description {
-        font-size: 16px;
-        margin-bottom: 40px auto;
-    }
-
-    .service-card {
-        flex: 1 1 45%;
-        /* Duas colunas em telas médias */
-    }
-
-    .services-cards-wrapper {
-        gap: 25px;
-    }
+.product-button {
+    display: inline-block;
+    background: #f0b6ff;
+    color: #5a3d5c;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border: 2px solid #e4b6ff;
 }
 
-@media (max-width: 768px) {
-    .services-section {
-        padding: 60px 15px;
-    }
-
-    .section-title {
-        font-size: 36px;
-    }
-
-    .section-description {
-        font-size: 15px;
-        margin-bottom: 30px auto;
-    }
-
-    .service-card {
-        flex: 1 1 100%;
-        /* Uma coluna em telas pequenas */
-        max-width: 400px;
-        /* Limita a largura do card mesmo em coluna única */
-        margin: 0 auto;
-        /* Centraliza o card */
-    }
-
-    .services-cards-wrapper {
-        gap: 20px;
-    }
-
-    .service-card h3 {
-        font-size: 22px;
-    }
-
-    .service-card p {
-        font-size: 15px;
-    }
+.product-button:hover {
+    background: transparent;
+    color: #ff69b4;
+    border-color: #ff69b4;
 }
 
-/* NOVOS ESTILOS PARA A SEÇÃO DE ESTATÍSTICAS */
+/* SEÇÃO SOBRE NÓS */
+.about-section {
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #5a3d5c;
+}
+
+.about-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f9f0ff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #5a3d5c;
+}
+
+.feature i {
+    color: #ff69b4;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* SEÇÃO DE ESTATÍSTICAS */
 .stats-section {
-    background: linear-gradient(135deg, rgba(74, 6, 94, 0.95) 0%, rgba(91, 17, 160, 0.95) 100%);
+    background: linear-gradient(135deg, #3d0f4b 0%, #dda0dd 50%, #550f6a 100%);
     padding: 80px 20px;
     text-align: center;
-    color: #ffffff;
+    color: #5a3d5c;
 }
 
 .stats-container {
-    max-width: 1200px; /* Largura máxima do container para não esticar demais */
-    margin: 0 auto; /* Centraliza o container horizontalmente */
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha em telas menores */
-    justify-content: space-around; /* Distribui os itens com espaço ao redor */
-    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
     gap: 30px;
 }
 
 .stat-item {
-    flex: 1; /* Permite que os itens cresçam e encolham */
+    flex: 1;
     min-width: 200px;
     text-align: center;
     padding: 10px;
-
 }
 
 .stat-number {
@@ -284,295 +319,150 @@ nav a:hover::after {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 5px;
-    color: #ffffff;
-  
+    color: #ff69b4;
 }
 
 .stat-description {
     font-size: 1.2em;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.3;
-    color: #ffffff;
-    margin-top: 0;
+    color: #5a3d5c;
 }
 
-/* Media Queries para Responsividade */
-@media (max-width: 768px) {
-    .stats-section {
-        padding: 60px 15px;
-    }
-    .stat-item {
-        min-width: 45%;
-    }
-    .stat-number {
-        font-size: 3.5em;  
-    }
-    .stat-description {
-        font-size: 1em;  
-    }
+/* SEÇÃO DE DEPOIMENTOS */
+.testimonials-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f9f0ff 0%, #e6f7ff 100%);
+    color: #5a3d5c;
 }
 
-@media (max-width: 480px) {
-    .stats-section {
-        padding: 40px 10px;
-    }
-    .stats-container {
-        flex-direction: column; /* Empilha os itens verticalmente em telas muito pequenas */
-        gap: 40px;
-    }
-    .stat-item {
-        min-width: 100%; 
-    }
-    .stat-number {
-        font-size: 3em;  
-    }
-    .stat-description {
-        font-size: 0.9em;  
-    }
-}
-
- /* NOVOS ESTILOS PARA A SEÇÃO DE DEPOIMENTOS */
- .testimonials-section {
-    padding: 80px 0; 
-    background: linear-gradient(135deg, rgba(65, 0, 85, 0.95) 0%, rgba(84, 17, 160, 0.95) 100%);
-    color: #ffffff; 
- }
-.testimonials-section .container { 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    text-align: center; 
+.testimonials-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .testimonials-section-title {
-    font-size: 3em; 
-    font-weight: 700; 
+    font-size: 3em;
+    font-weight: 700;
     margin-bottom: 10px;
-    color: #ffffff;
-    font-family: 'Poppins', Arial, sans-serif;
+    color: #ff69b4;
 }
 
 .testimonials-section-subtitle {
     font-size: 1.1em;
-    color: #cccccc; 
-    margin-bottom: 50px; 
-    max-width: 800px; 
+    color: #7a6a7c;
+    margin-bottom: 50px;
+    max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Poppins', Arial, sans-serif;
-}
-
-/* Contêiner do Carrossel */
-.carousel-container {
-    width: 100%;
-    margin: 0 auto;
-    overflow: hidden; /* Esconde o conteúdo que transborda horizontalmente */
-    position: relative;
-    padding-bottom: 20px; 
 }
 
 .testimonial-cards-wrapper {
     display: flex;
     gap: 30px;
-    padding: 20px; 
-    scroll-snap-type: x mandatory; /* Habilita o "snap" de rolagem para os cartões */
-    -webkit-overflow-scrolling: touch; /* Suaviza a rolagem em dispositivos iOS */
-    overflow-x: auto; /* Permite a rolagem horizontal */
-    justify-content: flex-start; /* Alinha os cartões ao início para a rolagem */
-
-    -ms-overflow-style: none;  /* Esconder para IE e Edge (legado) */
-    scrollbar-width: none;  /* Esconder para Firefox */
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-
-/* Cartão de Depoimento Individual */
 .testimonial-card {
-    background-color: #250c3b; 
-    border-radius: 15px; 
+    background-color: white;
+    border-radius: 20px;
     padding: 30px;
     text-align: left;
-    flex-shrink: 0; /* Impede que o cartão encolha */
-    width: calc((100% / 3) - 20px); /* Calcula a largura para 3 cartões com espaçamento */
-    max-width: 380px; 
-    box-sizing: border-box; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
-    scroll-snap-align: center; /* Ponto de "snap" para cada cartão (centraliza ao rolar) */
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 2px solid #f0e6ff;
 }
 
-/* Cabeçalho do Cartão (Avatar, Nome, Estrelas) */
-.testimonial-card .card-header { /* Especifica para evitar conflito com card-header de outras seções, se houver */
+.testimonial-card .card-header {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-bottom: 20px;
 }
 
 .testimonial-card .avatar {
-    width: 50px;
+    width: 60px;
     height: 60px;
-    border-radius: 80%; 
+    border-radius: 50%;
     margin-right: 15px;
-    object-fit: cover; /* Garante que a imagem preencha o círculo */
-    border: 2px solid #5d5e75; 
+    object-fit: cover;
+    border: 3px solid #ffb6c1;
 }
 
 .testimonial-card .user-name {
     font-size: 1.2em;
-    font-weight: 600; 
+    font-weight: 600;
     margin: 0;
-    color: #ffffff;
+    color: #5a3d5c;
 }
 
 .testimonial-card .user-handle {
     font-size: 0.9em;
-    color: #a0a0b8; 
+    color: #a0a0b8;
     margin: 0;
 }
 
 .testimonial-card .stars {
     display: flex;
-    font-size: 1.3em; 
-    margin-left: auto; 
+    font-size: 1.3em;
+    margin-left: auto;
     gap: 3px;
 }
 
 .testimonial-card .star {
-    color: #8a8af8; 
+    color: #ffd700;
 }
 
 .testimonial-card .star.empty {
-    color: #5d5e75;  
+    color: #e0e0e0;
 }
 
 .testimonial-text {
     font-size: 1em;
     line-height: 1.6;
-    color: #cccccc; 
+    color: #7a6a7c;
 }
 
-/* Paginação do Carrossel (Pontos) */
-.carousel-pagination {
-    display: flex;
-    justify-content: center; 
-    margin-top: 50px;
-    gap: 10px; 
-}
-
-.carousel-pagination .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; 
-    background-color: #5d5e75; 
-    cursor: pointer; 
-    transition: background-color 0.3s ease; 
-}
-
-.carousel-pagination .dot.active {
-    background-color: #ffffff; 
-    
-}
-.testimonial-card .star {
-    color: #8a8af8; 
-}
-
-.testimonial-card .star.empty {
-    color: #5d5e75; 
-}
-
-.testimonial-text {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #cccccc; 
-}
-
-/* Paginação do Carrossel (Pontos) */
-.carousel-pagination {
-    display: flex;
-    justify-content: center; 
-    margin-top: 50px;
-    gap: 10px; 
-}
-
-.carousel-pagination .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; 
-    background-color: #5d5e75; /* Cor dos pontos inativos */
-    cursor: pointer; /* Indica que são clicáveis (para JS) */
-    transition: background-color 0.3s ease; /* Transição suave de cor */
-}
-
-.carousel-pagination .dot.active {
-    background-color: #ffffff; 
-}
-
-/* Responsividade da Seção de Depoimentos */
-@media (max-width: 1200px) {
-    .testimonial-card {
-        width: calc(50% - 20px); /* Em telas médias (tablets), mostra 2 cartões por vez */
-        max-width: 500px; /* Permite que os cartões sejam um pouco mais largos */
-    }
-}
-
-@media (max-width: 768px) {
-    .testimonials-section-title {
-        font-size: 2.5em; /* Reduz o tamanho do título em telas menores */
-    }
-    .testimonials-section-subtitle {
-        font-size: 1em; /* Reduz o tamanho do subtítulo */
-    }
-    .testimonial-card {
-        width: calc(100% - 40px); /* Em telas pequenas (celulares), mostra 1 cartão por vez */
-        max-width: 450px; /* Largura máxima para garantir que não fiquem muito grandes */
-    }
-}
-
-@media (max-width: 480px) {
-    .testimonials-section-title {
-        font-size: 2em;
-    }
-    .testimonials-section {
-        padding: 50px 0; /* Reduz o padding da seção */
-    }
-    .testimonial-card {
-        width: calc(100% - 30px); /* Ajusta a largura para telas muito pequenas */
-    }
-    .carousel-pagination {
-        margin-top: 30px; /* Reduz o espaçamento da paginação */
-    }
-}
-
-/* ESTILOS DO FOOTER */
+/* FOOTER */
 .footer {
-    background-color: #0a0e28; /* Um azul marinho bem escuro */
+    background: linear-gradient(135deg, #5a3d5c 0%, #7a5c7c 100%);
     color: #ffffff;
-    padding: 80px 20px;
+    padding: 80px 20px 20px;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    flex-wrap: wrap; /* Permite que as colunas quebrem em telas menores */
-    justify-content: space-between; /* Distribui o espaço entre as colunas */
-    gap: 40px; /* Espaço entre as colunas */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .footer-column {
-    flex: 1; /* Permite que as colunas cresçam e encolham */
-    min-width: 200px; /* Largura mínima para cada coluna */
+    flex: 1;
+    min-width: 200px;
 }
 
-/* Coluna da marca (logo e social) */
 .brand-column {
-    flex: 1.2; /* Dar um pouco mais de espaço para a coluna da marca */
+    flex: 1.2;
     min-width: 250px;
 }
 
 .footer-logo {
     font-size: 2em;
     font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffb6c1;
+}
+
+.footer-description {
     margin-bottom: 20px;
-    letter-spacing: 1px;
+    line-height: 1.6;
+    color: #e0d0e0;
 }
 
 .social-icons {
@@ -588,40 +478,25 @@ nav a:hover::after {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #4a3eef; /* Azul similar ao dos ícones de serviço */
-    color: white;
+    background-color: #ffb6c1;
+    color: #5a3d5c;
     font-size: 1.2em;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 .social-icon:hover {
-    background-color: #5d5eff;
-    transform: translateY(-3px);
+    background-color: #ff69b4;
+    color: white;
 }
 
-/* Títulos das colunas do footer */
 .footer-heading {
     font-size: 1.3em;
     font-weight: 600;
     margin-bottom: 25px;
-    color: #ffffff;
-    position: relative;
+    color: #ffb6c1;
 }
 
-.footer-heading::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -8px; /* Posição da linha abaixo do título */
-    width: 40px; /* Comprimento da linha */
-    height: 3px;
-    background-color: #4a3eef; /* Cor da linha */
-    border-radius: 2px;
-}
-
-
-/* Listas de links e contato */
 .footer-links,
 .footer-contact {
     list-style: none;
@@ -634,45 +509,48 @@ nav a:hover::after {
     margin-bottom: 12px;
     font-size: 0.95em;
     line-height: 1.5;
+    display: flex;
+    align-items: center;
 }
 
 .footer-links a {
-    color: #cccccc;
+    color: #e0d0e0;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #ffffff;
+    color: #ffb6c1;
 }
 
-.footer-contact li {
-    color: #cccccc;
+.footer-contact li i {
+    margin-right: 10px;
+    color: #ffb6c1;
+    width: 20px;
+    text-align: center;
 }
 
-
-/* Coluna de Newsletter */
 .newsletter-column {
-    min-width: 280px; /* Pode precisar de mais largura por causa do formulário */
+    min-width: 280px;
 }
 
 .newsletter-description {
     font-size: 0.95em;
-    color: #cccccc;
+    color: #e0d0e0;
     margin-bottom: 20px;
     line-height: 1.5;
 }
 
 .newsletter-form {
     display: flex;
-    border: 1px solid #4a3eef;
+    border: 2px solid #ffb6c1;
     border-radius: 30px;
     overflow: hidden;
-    background-color: #1a1b3f; /* Fundo do input */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .newsletter-form input[type="email"] {
-    flex-grow: 1; /* Faz o input ocupar o máximo de espaço */
+    flex-grow: 1;
     padding: 12px 20px;
     border: none;
     background: transparent;
@@ -682,68 +560,131 @@ nav a:hover::after {
 }
 
 .newsletter-form input[type="email"]::placeholder {
-    color: #a0a0b8;
+    color: #d0c0d0;
 }
 
 .newsletter-form button[type="submit"] {
-    background-color: #4a3eef;
+    background-color: #ffb6c1;
     border: none;
     padding: 12px 20px;
-    color: white;
+    color: #5a3d5c;
     font-size: 1.1em;
     cursor: pointer;
-    border-radius: 0 30px 30px 0; /* Apenas o lado direito arredondado */
+    border-radius: 0 30px 30px 0;
     transition: background-color 0.3s ease;
-    display: flex; /* Para centralizar o ícone */
-    align-items: center;
-    justify-content: center;
 }
 
 .newsletter-form button[type="submit"]:hover {
-    background-color: #5d5eff;
+    background-color: #ff69b4;
+    color: white;
 }
 
-/* Responsividade do Footer */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #d0c0d0;
+    font-size: 0.9em;
+}
+
+/* RESPONSIVIDADE */
 @media (max-width: 992px) {
-    .footer-column {
-        flex: 1 1 calc(50% - 20px); /* Duas colunas por linha em telas médias */
-        min-width: unset; /* Remove o min-width para flexibilidade */
+    .about-container {
+        flex-direction: column;
     }
+    
+    .footer-column {
+        flex: 1 1 calc(50% - 20px);
+    }
+    
     .brand-column {
-        flex: 1 1 100%; /* Coluna da marca ocupa toda a largura em telas médias */
+        flex: 1 1 100%;
         text-align: center;
     }
-    .brand-column .footer-logo {
-        margin-bottom: 10px;
-    }
-    .brand-column .social-icons {
-        justify-content: center;
-        margin-bottom: 30px;
-    }
-    .footer-heading::after {
-        left: 50%;
-        transform: translateX(-50%); /* Centraliza a linha */
+    
+    .main-title {
+        font-size: 60px;
     }
 }
 
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column; /* Uma coluna por linha em telas pequenas */
-        align-items: center; /* Centraliza as colunas */
+    .header {
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
     }
+    
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .main-title {
+        font-size: 48px;
+    }
+    
+    .description {
+        font-size: 18px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .services-section {
+        padding: 60px 15px;
+    }
+    
+    .testimonials-section-title {
+        font-size: 2.5em;
+    }
+    
+    .stats-section {
+        padding: 60px 15px;
+    }
+    
+    .stat-item {
+        min-width: 45%;
+    }
+    
+    .stat-number {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 36px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .footer-column {
-        width: 100%; /* Ocupa toda a largura */
-        max-width: 400px; /* Limita a largura em telas muito grandes */
+        width: 100%;
+        max-width: 400px;
         text-align: center;
     }
-    .brand-column .social-icons {
-        margin-bottom: 40px; /* Mais espaço após ícones sociais */
+    
+    .stats-container {
+        flex-direction: column;
+        gap: 40px;
     }
-    .footer-heading {
-        margin-top: 30px; /* Espaço entre os títulos das seções */
+    
+    .stat-item {
+        min-width: 100%;
     }
-    .newsletter-form {
-        max-width: 350px; /* Limita a largura do formulário */
-        margin: 0 auto; /* Centraliza o formulário */
+    
+    .stat-number {
+        font-size: 3em;
+    }
+    
+    .testimonials-section {
+        padding: 50px 0;
     }
 }
