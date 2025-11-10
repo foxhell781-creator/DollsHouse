@@ -13,7 +13,7 @@ html {
 
 body {
     background-color: #fff9fb;
-    color: #5a3d5c;
+    color: #cb8fcf;
     line-height: 1.6;
 }
 
@@ -44,7 +44,7 @@ body {
     font-size: 32px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #ff69b4;
+    color: #e669ff;
     text-shadow: 2px 2px 0px #fff;
 }
 
@@ -54,7 +54,7 @@ nav {
 }
 
 nav a {
-    color: #5a3d5c;
+    color: #fab4ff;
     text-decoration: none;
     font-weight: 600;
     position: relative;
@@ -69,12 +69,12 @@ nav a::after {
     left: 0;
     width: 0;
     height: 3px;
-    background: #ff69b4;
+    background: #d569ff;
     transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #ff69b4;
+    color: #e169ff;
 }
 
 nav a:hover::after {
@@ -96,34 +96,34 @@ nav a:hover::after {
     font-size: 72px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #ff69b4;
-    text-shadow: 3px 3px 0px #fff;
+    color: rgb(207, 87, 255);
+    text-shadow: 3px 3px 0px #f7ceff;
 }
 
 .description {
     max-width: 600px;
     font-size: 20px;
     margin-bottom: 40px;
-    color: #5a3d5c;
+    color: #f9acff;
     font-weight: 500;
 }
 
 .cta-button {
     display: inline-block;
-    background: #ff69b4;
+    background: #dc68ff;
     color: white;
     padding: 16px 36px;
     border-radius: 50px;
     font-weight: 600;
     text-decoration: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 15px rgba(255, 105, 180, 0.4);
+    box-shadow: 0 6px 15px rgba(220, 105, 255, 0.4);
     font-size: 18px;
 }
 
 .cta-button:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 105, 180, 0.6);
+    box-shadow: 0 10px 20px rgba(225, 105, 255, 0.6);
 }
 
 /* SEÇÃO DE PRODUTOS */
@@ -225,8 +225,8 @@ nav a:hover::after {
 
 .product-button:hover {
     background: transparent;
-    color: #ff69b4;
-    border-color: #ff69b4;
+    color: #d569ff;
+    border-color: #e669ff;
 }
 
 /* SEÇÃO SOBRE NÓS */
@@ -274,7 +274,7 @@ nav a:hover::after {
 }
 
 .feature i {
-    color: #ff69b4;
+    color: #dc69ff;
 }
 
 .about-image {
@@ -292,7 +292,7 @@ nav a:hover::after {
 
 /* SEÇÃO DE ESTATÍSTICAS */
 .stats-section {
-    background: linear-gradient(135deg, #3d0f4b 0%, #dda0dd 50%, #550f6a 100%);
+    background: linear-gradient(135deg, #3d0f4b 0%, #d3a0dd 50%, #550f6a 100%);
     padding: 80px 20px;
     text-align: center;
     color: #5a3d5c;
@@ -319,7 +319,7 @@ nav a:hover::after {
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 5px;
-    color: #ff69b4;
+    color: #f5cfff;
 }
 
 .stat-description {
@@ -347,7 +347,7 @@ nav a:hover::after {
     font-size: 3em;
     font-weight: 700;
     margin-bottom: 10px;
-    color: #ff69b4;
+    color: #e681ff;
 }
 
 .testimonials-section-subtitle {
@@ -389,7 +389,7 @@ nav a:hover::after {
     border-radius: 50%;
     margin-right: 15px;
     object-fit: cover;
-    border: 3px solid #ffb6c1;
+    border: 3px solid #e8b6ff;
 }
 
 .testimonial-card .user-name {
@@ -428,7 +428,7 @@ nav a:hover::after {
 
 /* FOOTER */
 .footer {
-    background: linear-gradient(135deg, #5a3d5c 0%, #7a5c7c 100%);
+    background: linear-gradient(135deg, #3e2149 0%, #694170 100%);
     color: #ffffff;
     padding: 80px 20px 20px;
 }
@@ -456,7 +456,7 @@ nav a:hover::after {
     font-size: 2em;
     font-weight: 700;
     margin-bottom: 15px;
-    color: #ffb6c1;
+    color: #f3b6ff;
 }
 
 .footer-description {
@@ -478,7 +478,7 @@ nav a:hover::after {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: #ffb6c1;
+    background-color: #eeb6ff;
     color: #5a3d5c;
     font-size: 1.2em;
     text-decoration: none;
@@ -486,7 +486,7 @@ nav a:hover::after {
 }
 
 .social-icon:hover {
-    background-color: #ff69b4;
+    background-color: #e669ff;
     color: white;
 }
 
@@ -494,7 +494,7 @@ nav a:hover::after {
     font-size: 1.3em;
     font-weight: 600;
     margin-bottom: 25px;
-    color: #ffb6c1;
+    color: #f9b6ff;
 }
 
 .footer-links,
@@ -520,12 +520,12 @@ nav a:hover::after {
 }
 
 .footer-links a:hover {
-    color: #ffb6c1;
+    color: #f6b6ff;
 }
 
 .footer-contact li i {
     margin-right: 10px;
-    color: #ffb6c1;
+    color: #f6b6ff;
     width: 20px;
     text-align: center;
 }
@@ -543,7 +543,7 @@ nav a:hover::after {
 
 .newsletter-form {
     display: flex;
-    border: 2px solid #ffb6c1;
+    border: 2px solid #f6b6ff;
     border-radius: 30px;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.1);
@@ -564,10 +564,10 @@ nav a:hover::after {
 }
 
 .newsletter-form button[type="submit"] {
-    background-color: #ffb6c1;
+    background-color: #f6b6ff;
     border: none;
     padding: 12px 20px;
-    color: #5a3d5c;
+    color: #56255a;
     font-size: 1.1em;
     cursor: pointer;
     border-radius: 0 30px 30px 0;
@@ -575,7 +575,7 @@ nav a:hover::after {
 }
 
 .newsletter-form button[type="submit"]:hover {
-    background-color: #ff69b4;
+    background-color: #e169ff;
     color: white;
 }
 
